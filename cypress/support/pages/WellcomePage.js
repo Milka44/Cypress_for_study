@@ -1,5 +1,6 @@
 class Wellcomepage {
 	headerLogo = ".header_logo";
+	homeBtn = ".-active";
 	aboutBtn = '[appscrollto="aboutSection"]';
 	contactsBtn = '[appscrollto="contactsSection"]';
 	guestLoginBtn = ".header_right > .header-link";
@@ -15,7 +16,9 @@ class Wellcomepage {
 	getLogoBtn() {
 		return cy.get(this.headerLogo);
 	}
-
+	getHomeBtn() {
+		return cy.get(this.homeBtn);
+	}
 	getAboutBtn() {
 		return cy.get(this.aboutBtn);
 	}
