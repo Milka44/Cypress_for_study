@@ -1,5 +1,4 @@
 const { defineConfig } = require("cypress");
-
 module.exports = defineConfig({
 	projectId: "vhmazt",
 	watchForFileChanges: false,
@@ -11,7 +10,7 @@ module.exports = defineConfig({
 	chromeWebSecurity: false,
 	//screnshotsFolder: 'screens',
 	//videosFolder: 'video',
-	responseTimeout: 60000,
+	responseTimeout: 20000,
 	e2e: {
 		supportFile: false,
 			retries: {
