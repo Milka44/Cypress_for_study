@@ -5,9 +5,11 @@ import { validUserData } from "../fixtures/userData"
 import './commands'
 
 
+
+
 describe("Sign up into Qaauto", () => {
 	beforeEach('passes', () => {
-		cy.visit("https://guest:welcome2qauto@qauto.forstudy.space/")
+		cy.visit("/")
 		registrationSteps.fillWithValidUserData();
 			
 		})
@@ -52,15 +54,15 @@ describe("Sign up into Qaauto", () => {
 		  })
 	})	
 	
+	// it('Login', ()=> {
+	// 	cy.login(validUserData.email, validUserData.password);
+	// })
+	
 	it('Login', ()=> {
-		cy.login(validUserData.email, validUserData.password);
+		cy.login(Cypress.env('login') , Cypress.env('password') );
 	})
-	
-	
 
 		
-	
-    
 
     
     
