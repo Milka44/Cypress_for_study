@@ -1,6 +1,6 @@
 
 Cypress.Commands.add('login', (email, password) => {
-    cy.visit("https://guest:welcome2qauto@qauto.forstudy.space/");
+    cy.visit(Cypress.env('baseUrl'));
     cy.get('.btn.btn-outline-white.header_signin').click();
     cy.get('#signinEmail').type(email);
     cy.get('#signinPassword').type(password, { sensitive: true });

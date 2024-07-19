@@ -4,12 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testDev": "cypress run npx cypress open -C cypress.config.dev.js --spec cypress/e2e/addFuelExpence.cy.js",
+    "testStage": "cypress run npx cypress open -C cypress.config.js --spec cypress/e2e/addFuelExpence.cy.js",
+    "cy:openDev": "npx cypress open -C cypress.config.dev.js",
+    "cy:openStage": "npx cypress open -C cypress.config.stage.js",
+    "test:record": "cypress run --record",
+    "test:reporter": "cypress run --reporter mochawesome",
+    "test:spec": "cypress run --spec",
+    "test:tag": "cypress run --tag",
+    "test:config": "cypress run --config",
+    "test:env": "cypress run --env",
+    "e2e:chrome": "cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.13.0",
     "cypress-real-events": "^1.13.0"
+  },
+  "devDependencies": {
+    "cypress-multi-reporters": "^1.6.4",
+    "mochawesome": "^7.1.3"
   }
 }
